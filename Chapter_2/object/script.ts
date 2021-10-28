@@ -12,7 +12,7 @@ const user2 = {
     courses: ['Java','C#']
 }
 
-
+const union1 = undefined
 
 function printUser(user: { name: string, age: number, courses: string[] }) {
     console.log(user.name)
@@ -20,5 +20,16 @@ function printUser(user: { name: string, age: number, courses: string[] }) {
     console.log(user.courses)
 }
 
+function check ( isTrue: string | undefined  ) {
+    if(isTrue){
+        console.log("true")
+    }else {
+        console.log("false")
+    }
+}
+
 printUser(user1)
 printUser(user2)
+
+check('best')
+check(union1)
