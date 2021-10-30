@@ -1,0 +1,25 @@
+
+
+interface IsSized  {
+    length: number
+}
+
+
+class DataBox <Type> {
+    content: Type
+
+
+    constructor(input: Type){
+        this.content = input
+    }
+
+    print(){
+        console.log(this.content)
+    }
+}
+const d1 = new DataBox('Hello')
+console.log(d1.content.length)
+
+
+
+d1.print()

@@ -1,0 +1,13 @@
+{
+  "name": "Chapter_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.ts",
+  "scripts": {
+    "watch": "tsc -watch -p ./",
+    "server": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

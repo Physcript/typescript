@@ -1,0 +1,17 @@
+
+
+interface Point2Ds {
+    xPos: number,
+    yPos: number,
+    name?: string,
+    readonly model?: string
+}
+
+const result: Point2Ds = {
+    xPos: 1,
+    yPos: 2,
+    name: "motor",
+    model: "honda"
+}
+
+console.log(result)

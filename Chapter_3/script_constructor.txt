@@ -1,0 +1,32 @@
+
+
+class Point2D {
+    // protected xPos: number
+    // protected yPos: number
+
+    private xPos: number
+    private yPos: number
+
+    constructor(xPosInput: number, yPosInput: number){
+        this.xPos = xPosInput
+        this.yPos = yPosInput
+
+        // accesible for only this class
+        console.log('constructor for point 2d')
+        console.log(this.xPos)
+        console.log(this.yPos)
+
+    }
+}
+
+class Point3D extends Point2D {
+    protected zPos: number
+
+    constructor(xPosInput: number, yPostInput: number, zPostInput: number){
+        super(xPosInput,yPostInput)
+        this.zPos = zPostInput
+    }
+}
+
+const p1 = new Point2D(2,0)
+const p2 = new Point3D(0,0,1)

@@ -1,0 +1,50 @@
+
+
+
+interface AppointmenInterface {
+    startTime: Date
+    endTime: Date
+    description: string
+
+
+    printAppointment(): void
+
+}
+
+abstract class AppointmentABC {
+
+    protected startTime: Date
+    protected endTime: Date
+    protected description: string
+
+    constructor(startTimeInput: Date, endTimeInput: Date, description: string){
+        this.startTime = startTimeInput
+        this.endTime = endTimeInput
+        this.description = description
+    }
+
+    public abstract printAppointment(): void
+
+
+}
+
+class Appointment extends AppointmentABC {
+
+    constructor(startTimeInput: Date, endTimeInput: Date, descriptionInput: string){
+        super(startTimeInput,endTimeInput,descriptionInput)
+    }
+
+    printAppointment(){
+        console.log(this.startTime)
+        console.log(this.endTime)
+        console.log(this.description)
+    }
+
+}
+
+
+const a1 = new Date
+const a2 = new Date
+const a3 = 'hello'
+
+const a4 = new Appointment(a1,a2,a3)
